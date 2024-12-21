@@ -1,8 +1,6 @@
 # MoodMosiac_Web
 A Python-based application that helps users track their daily moods and generates valuable insights about their emotional patterns. The system provides both daily comparisons and weekly analysis summaries.
 
-![overall](https://github.com/user-attachments/assets/818a2fcd-1957-4f17-a982-079c4f76cd23)
-
 ## How to use MoodMosiac?
  ### Step 01: Create an Account
   1.	Open the web application in your browser via the link.
