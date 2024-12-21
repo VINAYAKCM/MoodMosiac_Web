@@ -22,19 +22,6 @@ pip install -r requirements.txt
 ```bash
 python init_db.py
 ```
-## Usage:
-1. **Log Your Mood**:
-```python
-python log_mood.py
-```
-2. **View Daily Insight**:
-```python
-python daily_insight.py
-```
-3. **Generate Weekly Summary**:
-```python
-python weekly_insight.py
-```
 ## Database Structure:
 The application uses SQLite with two main tables:
 
