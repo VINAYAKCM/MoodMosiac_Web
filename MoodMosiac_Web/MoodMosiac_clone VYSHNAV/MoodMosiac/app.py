@@ -12,7 +12,7 @@ app.secret_key = "your_secret_key_here"  # Replace with a secure key in producti
 DATABASE = 'mood_tracker.db'
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyACD95Jt9oglhUY_iMyjxAet44zFt5hUwI")
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 def get_db():
