@@ -1,5 +1,4 @@
-sqlite3
-flask
-passlib
-apscheduler
-google-generative-ai
+flask==2.2.5
+passlib==1.7.4
+apscheduler==3.9.1
+google-generative-ai==0.2.0
