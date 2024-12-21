@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Weekly Insights | Mood Tracker{% endblock %}
+{% block content %}
+<div class="insights-container">
+    <h1 class="page-title">Your Weekly Mood Insights</h1>
+    {% if insights %}
+        {% for insight in insights %}
+        <div class="insight-card card mb-4">
+            <!--<div class="card-header">
+                <h3>Week of {{ insight.start_date }} to {{ insight.end_date }}</h3>
+                <span class="text-muted">Generated on {{ insight.created_at }}</span>
+            </div> -->
+            <div class="card-body">
+                {% if insight.previous_insight %}
+                <div class="previous-insight">
+                    <h4>Previous Week's Context:</h4>
+                    <p class="text-muted">{{ insight.previous_insight | truncate(200) }}</p>
+                    <hr>
+                </div>
+                {% endif %}
+                {{ insight.insight_text | safe }}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-info">
+            <p>No insights available yet! Insights are generated every 8 days based on your mood entries.</p>
+            <p>Keep logging your daily moods, and check back in a week for your first personalized insight!</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block head_scripts %}
+<style>
+.insights-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.insight-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.card-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+    white-space: pre-wrap;
+}
+
+.page-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.previous-insight {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.mini-heatmap-container {
+    margin-top: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert {
+    padding: 20px;
+    border-radius: 10px;
+    background: #e3f2fd;
+    color: #1565c0;
+}
+</style>
+{% endblock %}
+
+{% block body_scripts %}
+<script src="{{ url_for('static', filename='js/mood-heatmap.js') }}"></script>
+{% endblock %}

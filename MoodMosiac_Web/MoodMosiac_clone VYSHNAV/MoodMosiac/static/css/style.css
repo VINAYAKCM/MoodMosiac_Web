@@ -1,0 +1,726 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+
+/* Index css */
+/* Hero section styles */
+.intro {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--card-background);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.intro h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* Vendor-prefixed property for WebKit browsers */
+  -webkit-text-fill-color: transparent; /* Ensures the text color is transparent */
+  color: transparent; /* Added for non-webkit browsers to ensure compatibility */
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.intro .btn {
+  font-size: 1.125rem;
+  padding: 1.25rem 3rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+.intro .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
+  background: var(--primary-dark);
+}
+
+/* Additional header styles */
+header nav {
+  padding: 1.25rem 2rem;
+}
+
+header nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro {
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Login and register css */
+/* Authentication form styles */
+.auth-form {
+  max-width: 450px;
+  margin: 4rem auto;
+  background: var(--card-background);
+  padding: 2.5rem; /* Reduced overall padding */
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.auth-form h2 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem; /* Reduced space below the heading */
+  text-align: center;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Reduced gap between form elements */
+}
+
+.auth-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* Reduced gap between label and input */
+  margin-bottom: 0.8rem; /* Reduced space between form groups */
+}
+
+.auth-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem; /* Additional reduction for spacing */
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.8rem; /* Reduced padding inside input fields */
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.auth-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+  outline: none;
+}
+
+.auth-form button {
+  background: var(--primary);
+  color: white;
+  padding: 0.9rem; /* Slightly reduced button padding */
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem; /* Reduced top margin for the button */
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+.auth-form button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.25);
+}
+
+/* Additional helper text styles */
+.auth-form .helper-text {
+  text-align: center;
+  margin-top: 1rem; /* Reduced space above helper text */
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.auth-form .helper-text a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-form .helper-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-form {
+    margin: 2rem auto;
+    padding: 2rem; /* Slightly reduced padding for smaller screens */
+  }
+}
+
+/* Mood page css*/
+/* Mood Input Section */
+.mood-section {
+  max-width: 600px; /* Reduced width */
+  margin: 2rem auto; /* Adjusted margin for centering */
+  padding: 2rem; /* Slightly reduced padding */
+  background: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.mood-section h2.card-title {
+  font-size: 1.75rem; /* Adjusted font size */
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem; /* Reduced margin */
+}
+
+/* Daily Insight */
+.daily-insight {
+  background: var(--primary-light);
+  border-radius: 0.75rem;
+  padding: 1rem; /* Reduced padding */
+  margin: 1rem auto 1.5rem; /* Centered horizontally */
+  border-left: 4px solid var(--primary);
+  box-shadow: var(--shadow-sm);
+  max-width: 500px; /* Ensure the width is contained */
+  text-align: center; /* Center align text */
+}
+
+.daily-insight h3 {
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.daily-insight p {
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/*Date*/
+/* Style the "Select Date" section */
+.form-group label {
+  display: block;
+  font-size: 1rem; /* Slightly larger font size */
+  font-weight: 600; /* Increased font weight for better visibility */
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark); /* Add color to make it stand out */
+}
+
+#entry_date {
+  width: 100%; /* Full width */
+  padding: 0.8rem 1rem; /* Add padding for a more appealing input field */
+  border: 2px solid var(--primary-light);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-primary);
+  background: var(--card-background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#entry_date:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary-light);
+  outline: none;
+}
+
+/* Increase spacing below the paragraph */
+.text-secondary {
+  margin-bottom: 1.5rem; /* Increase this value for more spacing */
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Ensure "Select Date" stays aligned properly */
+.form-group label {
+  margin-top: 0; /* Ensure no unnecessary top margin */
+}
+
+/* Mood Options in One Horizontal Block */
+.mood-options {
+  display: flex; /* Changed to flex for horizontal layout */
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0; /* Adjusted margin */
+}
+
+/* Mood options container */
+.mood-options {
+  display: flex; /* Change grid to flexbox */
+  justify-content: center; /* Center the emojis horizontally */
+  gap: 1rem; /* Adjust spacing between emojis */
+  margin: 2rem 0; /* Keep the vertical spacing */
+  flex-wrap: nowrap; /* Ensure all emojis stay in one line */
+}
+
+/* Emoji option styling remains the same */
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-option .emoji {
+  font-size: 2rem;
+}
+
+.mood-option .label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.mood-option:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.mood-option.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* Heatmap Section */
+.heatmap-wrapper {
+  max-width: 1000px; /* Increased width for full view */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.heatmap-wrapper h2 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.months-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Set 6 months per row */
+  gap: 1rem; /* Space between months */
+  margin-top: 1.5rem;
+  justify-items: center; /* Centers the grid items */
+  align-items: start;
+}
+
+.day-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.heatmap-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.heatmap-legend span,
+.heatmap-legend .legend-color {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.year-display {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Aligns vertically */
+  gap: 1rem; /* Adds space between the buttons */
+  text-align: center;
+  margin-top: 1.5rem;
+}
+/* Mood page css*/
+
+
+/* Base styles */
+:root {
+  --primary: #7C3AED;  /* Purple */
+  --primary-light: #DDD6FE;
+  --primary-dark: #6D28D9;
+  --secondary: #10B981;  /* Emerald */
+  --secondary-light: #D1FAE5;
+  --background: #F8FAFC;
+  --card-background: #ffffff;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --border-color: #E2E8F0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+header nav {
+  background: var(--card-background);
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+header nav ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  gap: 2rem;
+}
+
+header nav ul li:first-child {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-right: auto;
+}
+
+header nav ul li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem;
+  width: 100%;
+}
+
+/* Card component */
+.card {
+  background: var(--card-background);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Forms */
+.auth-form, .mood-section {
+  max-width: 32rem;
+  margin: 3rem auto;
+  background: var(--card-background);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: var(--card-background);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #0EA5E9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* Mood Input Section */
+.mood-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.mood-button {
+  font-size: 2.5rem;
+  padding: 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  background: var(--card-background);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-button:hover {
+  transform: scale(1.05) translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+/* Mood options with emojis */
+.mood-select {
+  display: none; /* Hide the original select */
+}
+
+.mood-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.mood-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-option .emoji {
+  font-size: 2rem;
+}
+
+.mood-option .label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.mood-option:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.mood-option.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+/* Dashboard/Insights */
+.insights {
+  display: grid;
+  gap: 2rem;
+}
+
+.heatmap-container {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.suggestions {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* Messages */
+.info-message {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  background: var(--card-background);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  header nav ul li:first-child {
+    margin-bottom: 1rem;
+  }
+  
+  .mood-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .mood-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.heatmap-section {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.heatmap-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.heatmap-cell.happy { background-color: #FFD700; }
+.heatmap-cell.excited { background-color: #FF6347; }
+.heatmap-cell.neutral { background-color: #ADD8E6; }
+.heatmap-cell.stressed { background-color: #FFA07A; }
+.heatmap-cell.sad { background-color: #87CEFA; }
